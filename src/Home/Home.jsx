@@ -13,6 +13,7 @@ import metamask from "../images/MetaMask.png";
 import connectWallet from "../images/WalletConnect.png";
 import { RxCross2 } from "react-icons/rx";
 import { useState } from "react";
+import matic from "../images/matic.png";
 const customStyles = {
   content: {
     top: "50%",
@@ -30,17 +31,21 @@ const customStyles = {
 };
 const modalWrapper = {
   background: "#202932",
-  width: "300px",
-  height: "300px",
+  width: "350px",
+  height: "350px",
 };
 
 const Home = () => {
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [whichModal, setWhichModal] = useState("mint");
+  const [buyWithMatic, setBuyWithMatic] = useState(false);
 
   const handleWhichModal = (which) => {
     setWhichModal(which);
+  };
+  const HandleBuywithMatic = () => {
+    setBuyWithMatic(false);
   };
 
   function openModal() {
@@ -55,6 +60,7 @@ const Home = () => {
   function closeModal() {
     setWhichModal("mint");
     setIsOpen(false);
+    setBuyWithMatic(false);
   }
 
   return (
@@ -173,53 +179,117 @@ const Home = () => {
         )} */}
 
         {/* if account */}
-        <div style={modalWrapper}>
-          <div
-            style={{
-              background: "#1668D4",
-              padding: "10px",
-              display: "flex",
-              justifyContent: "space-evenly",
-              textTransform: "uppercase",
-              letterSpacing: "2px",
-              fontSize: "14px",
-              alignItems: "center",
-            }}
-          >
-            <div>Select Below</div>
-            <button
-              style={{
-                background: "transparent",
-                border: "none",
-                fontSize: "30x",
-                padding: "5px",
-              }}
-              onClick={closeModal}
-            >
-              <RxCross2 style={{ fontSize: "24px" }} />
-            </button>
-          </div>
-          <div style={{ padding: "50px 10px", textAlign: "center" }}>
+        {buyWithMatic && (
+          <div style={modalWrapper}>
             <div
               style={{
-                border: "2px solid #1668D4",
-                margin: "10px auto",
+                background: "#1668D4",
                 padding: "10px",
+                display: "flex",
+                justifyContent: "space-evenly",
+                textTransform: "uppercase",
+                letterSpacing: "2px",
+                fontSize: "14px",
+                alignItems: "center",
               }}
             >
-              <p
+              <div>Select Below</div>
+              <button
                 style={{
-                  fontSize: "12px",
+                  background: "transparent",
+                  border: "none",
+                  fontSize: "30x",
                   padding: "5px",
                 }}
+                onClick={closeModal}
               >
-                Connet Wallet
-              </p>
-              <p>xxxxxxxxxxxxxxxxxxxxxxx</p>
-              <button className="btn-modal">Buy with matic</button>
+                <RxCross2 style={{ fontSize: "24px" }} />
+              </button>
+            </div>
+            <div style={{ padding: "50px 10px", textAlign: "center" }}>
+              <div
+                style={{
+                  border: "2px solid #1668D4",
+                  margin: "10px auto",
+                  padding: "10px",
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: "12px",
+                    padding: "5px",
+                  }}
+                >
+                  Connet Wallet
+                </p>
+                <p>xxxxxxxxxxxxxxxxxxxxxxx</p>
+                <button className="btn-modal" onClick={HandleBuywithMatic}>
+                  <img
+                    src={matic}
+                    alt="matic"
+                    style={{ width: "20px", margin: "0 5px" }}
+                  />
+                  Buy with matic
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        )}
+
+        {!buyWithMatic && (
+          <div style={modalWrapper}>
+            <div
+              style={{
+                background: "#1668D4",
+                padding: "10px",
+                display: "flex",
+                justifyContent: "space-evenly",
+                textTransform: "uppercase",
+                letterSpacing: "2px",
+                fontSize: "14px",
+                alignItems: "center",
+              }}
+            >
+              <div>Buy with Matic</div>
+              <button
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  fontSize: "30x",
+                  padding: "5px",
+                }}
+                onClick={closeModal}
+              >
+                <RxCross2 style={{ fontSize: "24px" }} />
+              </button>
+            </div>
+            <div style={{ padding: "50px 10px", textAlign: "center" }}>
+              <div
+                style={{
+                  border: "2px solid #1668D4",
+                  margin: "10px auto",
+                  padding: "10px",
+                }}
+              >
+                <input
+                  type="number"
+                  value={0}
+                  style={{
+                    background: "transparent",
+                    border: "1px solid #1668D4",
+                    padding: "10px",
+                    fontSize: "20px",
+                  }}
+                />
+                <div>
+                  <button className="btn-modal">-</button>
+                  <button className="btn-modal">+</button>
+                  <button className="btn-modal">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </Modal>
       <Nav />
       <Hero openModal={openModal} />

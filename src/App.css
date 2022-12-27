@@ -23,10 +23,11 @@
 .btn-modal {
   background: #1668d4;
   padding: 10px;
+  min-width: 50px;
   border: none;
   margin: 10px;
   border: 1px solid #fff;
-  box-shadow: -10px 10px 1px #1668d4;
+  box-shadow: -5px 5px 1px #1668d4;
 }
 .btn-modal:active {
   box-shadow: none;
