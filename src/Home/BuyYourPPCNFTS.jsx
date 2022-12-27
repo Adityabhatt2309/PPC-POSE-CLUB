@@ -1,6 +1,6 @@
 import React from "react";
 
-const BuyYourPPCNFTS = () => {
+const BuyYourPPCNFTS = ({totalMinted}) => {
   return (
     <div className="buy-your-ppc">
       <div className="buy-your-ppc-wrapper">
@@ -13,9 +13,9 @@ const BuyYourPPCNFTS = () => {
             architecto deleniti veniam ullam beatae alias sint magni, voluptate
             enim doloribus vel.
           </div>
-        </div>
+        </div> 
       </div>
-      <h3>Totatl minted: 51</h3>
+      <h3>Totatl minted: {totalMinted}</h3>
       <div className="btn-wrapper ppc-btn-wrapper">
         <button className="btn">Mint now</button>
         <button className="btn">Connect</button>

@@ -56,6 +56,13 @@ const Home = () => {
   const minterContract = useMinterContract();
   const nftContract = useNftContract();
 
+  const handleClickScroll = () => {
+    const element = document.getElementById("section-1");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const [totalMinted, settotalMinted] = useState("0")
   const [round, setround] = useState("")
   const [price, setPrice] = useState(0);
@@ -448,12 +455,12 @@ const Home = () => {
    
       </Modal>
       <Nav />
-      <Hero openModal={openModal} />
+      <Hero openModal={openModal} handleClickScroll={handleClickScroll} />
       <PenguinePoseClub />
       <PenguinePoseClubNFTs />
       <PenguineCharacterstics />
       <HowToBuy />
-      <BuyYourPPCNFTS />
+      <BuyYourPPCNFTS totalMinted={totalMinted} />
       <FAQ />
       <Footer />
     </div>

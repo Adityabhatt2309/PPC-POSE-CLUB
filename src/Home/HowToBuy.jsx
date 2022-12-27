@@ -2,7 +2,7 @@ import React from "react";
 
 const HowToBuy = () => {
   return (
-    <div className="how-to-buy">
+    <div id="section-1" className="how-to-buy">
       <h1>How to buy?</h1>
       <div className="grid-container">
         <div className="card">

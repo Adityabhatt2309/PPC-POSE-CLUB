@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 
-const Hero = ({ openModal }) => {
+const Hero = ({ openModal, handleClickScroll }) => {
   const { account } = useWeb3React();
   const [btnText, setbtnText] = useState("CONNECT WALLET");
 
@@ -23,7 +23,9 @@ const Hero = ({ openModal }) => {
           <button className="btn" onClick={openModal}>
             {btnText}
           </button>
-          <button className="btn">How to buy</button>
+          <button className="btn" onClick={handleClickScroll}>
+            How to buy
+          </button>
           <button className="btn">New to crypto</button>
         </div>
       </div>
