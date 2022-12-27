@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Nav from "./Nav";
 import Hero from "./Hero";
 import PenguinePoseClub from "./PenguinePoseClub";
@@ -12,6 +12,13 @@ import Modal from "react-modal";
 import metamask from "../images/MetaMask.png";
 import connectWallet from "../images/WalletConnect.png";
 import { RxCross2 } from "react-icons/rx";
+
+// web3 related imports
+import MetaMaskOnboarding from "@metamask/onboarding";
+import { useWeb3React } from "@web3-react/core";
+import { injected, walletconnect } from "../utils/connector";
+import Web3 from "web3";
+
 const customStyles = {
   content: {
     top: "50%",
@@ -36,6 +43,9 @@ const Home = () => {
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
+  const { connector, account, activate, error, active, chainId, deactivate } =
+    useWeb3React();
+
   function openModal() {
     setIsOpen(true);
   }
@@ -48,6 +58,58 @@ const Home = () => {
   function closeModal() {
     setIsOpen(false);
   }
+
+  const [activatingConnector, setActivatingConnector] = useState();
+  const onboarding = useRef();
+
+  const onConnectWithMetamaskClick = () => {
+    if (MetaMaskOnboarding.isMetaMaskInstalled()) {
+      setActivatingConnector(injected);
+      activate(injected, undefined, true)
+        .then(() => {
+          //console.log("Connected successfully");
+        })
+        .catch(() => {
+          // setTried(true);
+        });
+      localStorage.setItem("connectedWallet", "metamask");
+    } else {
+      onboarding.current.startOnboarding();
+    }
+  };
+
+  const onConnectWithWalletConnect = () => {
+    setActivatingConnector(walletconnect);
+    activate(walletconnect, undefined, true).catch((err) => {
+      setActivatingConnector();
+      walletconnect.walletConnect1Provider = undefined;
+      localStorage.removeItem("connectedWallet");
+      if (err) {
+        window.location.reload(false);
+      }
+    });
+    localStorage.setItem("connectedWallet", "walletConnect");
+  };
+
+  useEffect(() => {
+    if (!onboarding.current) {
+      onboarding.current = new MetaMaskOnboarding();
+    }
+  }, []);
+
+  useEffect(() => {
+    if (MetaMaskOnboarding.isMetaMaskInstalled()) {
+      if (account && account.length > 0) {
+        onboarding.current.stopOnboarding();
+      }
+    }
+  }, [account]);
+
+  useEffect(() => {
+    if (activatingConnector && activatingConnector === connector) {
+      setActivatingConnector(undefined);
+    }
+  }, [activatingConnector, connector]);
 
   return (
     <div>
@@ -100,6 +162,10 @@ const Home = () => {
                 height: "100px",
                 border: "1px solid #1668D4",
               }}
+              onClick={() => {
+                onConnectWithMetamaskClick()
+                closeModal()
+              }}
             />
             <img
               src={connectWallet}
@@ -108,6 +174,10 @@ const Home = () => {
                 height: "100px",
                 border: "1px solid #1668D4",
                 backgroundSize: "contain",
+              }}
+              onClick={() => {
+                onConnectWithWalletConnect()
+                closeModal()
               }}
             />
           </div>
