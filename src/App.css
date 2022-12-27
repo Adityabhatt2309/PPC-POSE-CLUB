@@ -141,14 +141,16 @@
 }
 .penguine-characterstics-wrapper p {
   font-size: 14px;
-  margin: 10px;
+  margin: 10px auto;
   font-family: "Poppins";
+  max-width: 700px;
 }
 .penguine-characterstics-wrapper .gif-wrapper {
   width: 100%;
-  max-width: 500px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
 }
 .penguine-characterstics-wrapper .gif-wrapper img {
@@ -671,5 +673,24 @@
   }
   .pose-club-nfts {
     padding: 50px;
+  }
+  .penguine-characterstics-wrapper {
+    padding: 50px;
+  }
+  .penguine-characterstics-wrapper h1 {
+    font-size: 40px;
+  }
+  .penguine-characterstics-wrapper .gif-wrapper {
+    flex-direction: row;
+  }
+  .penguine-characterstics-wrapper .gif-wrapper img {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    background: radial-gradient(
+      circle closest-corner at center 125px,
+      rgb(84, 84, 84),
+      black 40%
+    );
   }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-const Hero = () => {
+const Hero = ({ openModal }) => {
   return (
     <div className="hero">
       <div className="hero-heading">
@@ -9,7 +9,9 @@ const Hero = () => {
           <h1>Cheap as possible</h1>
         </div>
         <div className="btn-wrapper">
-          <button className="btn">Connect wallet</button>
+          <button className="btn" onClick={openModal}>
+            Connect wallet
+          </button>
           <button className="btn">How to buy</button>
           <button className="btn">New to crypto</button>
         </div>
