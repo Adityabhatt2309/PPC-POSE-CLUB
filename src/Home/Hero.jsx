@@ -3,11 +3,11 @@ const Hero = ({ openModal }) => {
   return (
     <div className="hero">
       <div className="hero-heading">
-        <div>
+        {/* <div>
           <h1>Buy PPC NFTs</h1>
           <h1>Earlier and get</h1>
           <h1>Cheap as possible</h1>
-        </div>
+        </div> */}
         <div className="btn-wrapper">
           <button className="btn" onClick={openModal}>
             Connect wallet
