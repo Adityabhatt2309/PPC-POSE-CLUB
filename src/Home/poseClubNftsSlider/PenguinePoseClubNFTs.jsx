@@ -12,7 +12,9 @@ import SiderOne from "./SiderOne";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import SiderTwo from "./SliderTwo";
 import SiderThree from "./SliderThree";
-const PenguinePoseClubNFTs = () => {
+import { useWeb3React } from "@web3-react/core";
+const PenguinePoseClubNFTs = ({ openModal }) => {
+  const { account } = useWeb3React();
   return (
     <div className="pose-club-nfts">
       <h1>Penguine pose club NFTS</h1>
@@ -49,8 +51,14 @@ const PenguinePoseClubNFTs = () => {
           NFTs.
         </p>
         <div>
-          <button className="btn">Min now</button>
-          <button className="btn">Connect Wallet</button>
+          <button className="btn" onClick={openModal}>
+            Mint now
+          </button>
+          {!account && (
+            <button className="btn" onClick={openModal}>
+              Connect Wallet
+            </button>
+          )}
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const HowToBuy = () => {
+const HowToBuy = ({ openModal }) => {
   return (
     <div id="section-1" className="how-to-buy">
       <h1>How to buy?</h1>
@@ -66,7 +66,9 @@ const HowToBuy = () => {
           </div>
         </div>
       </div>
-      <button className="btn">Get Started</button>
+      <button className="btn" onClick={openModal}>
+        Get Started
+      </button>
     </div>
   );
 };

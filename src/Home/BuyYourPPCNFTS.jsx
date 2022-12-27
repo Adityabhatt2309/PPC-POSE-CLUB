@@ -1,6 +1,8 @@
+import { useWeb3React } from "@web3-react/core";
 import React from "react";
 
-const BuyYourPPCNFTS = ({totalMinted}) => {
+const BuyYourPPCNFTS = ({ totalMinted, openModal }) => {
+  const { account } = useWeb3React();
   return (
     <div className="buy-your-ppc">
       <div className="buy-your-ppc-wrapper">
@@ -13,12 +15,18 @@ const BuyYourPPCNFTS = ({totalMinted}) => {
             architecto deleniti veniam ullam beatae alias sint magni, voluptate
             enim doloribus vel.
           </div>
-        </div> 
+        </div>
       </div>
       <h3>Totatl minted: {totalMinted}</h3>
       <div className="btn-wrapper ppc-btn-wrapper">
-        <button className="btn">Mint now</button>
-        <button className="btn">Connect</button>
+        <button className="btn" onClick={openModal}>
+          Mint now
+        </button>
+        {!account && (
+          <button className="btn" onClick={openModal}>
+            Connect
+          </button>
+        )}
       </div>
     </div>
   );
