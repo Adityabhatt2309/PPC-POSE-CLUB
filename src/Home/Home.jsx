@@ -47,6 +47,7 @@ const Home = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [whichModal, setWhichModal] = useState("mint");
   const [buyWithMatic, setBuyWithMatic] = useState(true);
+  const [count, setCount] = useState(0)
 
   const handleWhichModal = (which) => {
     setWhichModal(which);
@@ -338,7 +339,7 @@ const Home = () => {
               >
                 <input
                   type="number"
-                  value={0}
+                  value={count}
                   style={{
                     background: "transparent",
                     border: "1px solid #1668D4",
@@ -347,8 +348,10 @@ const Home = () => {
                   }}
                 />
                 <div>
-                  <button className="btn-modal">-</button>
-                  <button className="btn-modal">+</button>
+                  <button className="btn-modal" onClick={() => {
+                    if (count !== 0) 
+                    setCount(count-1)}} >-</button>
+                  <button className="btn-modal" onClick={() => {setCount(count+1)}}>+</button>
                   <button className="btn-modal">Buy Now</button>
                 </div>
               </div>
