@@ -1,0 +1,675 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap");
+@font-face {
+  font-family: "Rockwell";
+  src: url("../src/fonts/rockwell-extra-bold/rockeb.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Rockwell", sans-serif;
+}
+
+/* Navbar  */
+.navbar {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background: #1668d4;
+}
+
+.navbar .ppc-logo {
+  max-width: 130px;
+}
+
+/* Hero */
+
+.hero {
+  width: 100%;
+  background: url("../src/images/Hero-background.svg");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.hero .hero-heading {
+  max-width: 900px;
+  padding: 50px;
+}
+.hero .hero-heading h1 {
+  background: #1668d4;
+  width: fit-content;
+  padding: 5px 10px;
+  font-size: 60px;
+}
+.hero .hero-penguins {
+  background: url("/src/images//penguins.svg");
+  width: 40%;
+}
+.btn-wrapper {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+.btn-wrapper .btn {
+  background: #202932;
+  padding: 10px;
+  margin: 10px;
+  max-width: 200px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  box-shadow: -10px 10px 1px #000;
+}
+.btn-wrapper .btn:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+/* penguine pose club */
+
+.penguine-pose-wrapper {
+  background: #1668d4;
+  padding: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.penguine-pose-wrapper .text-wrapper {
+  max-width: 700px;
+  margin: 10px auto;
+  text-align: left;
+}
+.penguine-pose-wrapper .text-wrapper h1 {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 25px;
+}
+.penguine-pose-wrapper .text-wrapper p {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  margin: 0 auto;
+}
+.penguine-pose-wrapper .penguine-pose-image-wrapper {
+  width: 100%;
+  background: url("../src/images/Hero-background.svg");
+  height: 200px;
+  background-size: cover;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+/* pose club nfts */
+.pose-club-nfts {
+  background: #202932;
+  text-align: center;
+  padding: 20px;
+}
+
+.pose-club-nfts h1 {
+  text-transform: uppercase;
+}
+.pose-club-nfts .copyrights p {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: "Poppins";
+}
+
+.copyrights .btn {
+  padding: 10px;
+  background: #1668d4;
+  border: 1px solid #fff;
+  box-shadow: -10px 10px 1px #1668d4;
+  margin: 10px;
+}
+.copyrights .btn:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+/* penguine-characterstics */
+.penguine-characterstics-wrapper {
+  background-color: #1668d4;
+  text-align: center;
+  padding: 10px;
+}
+.penguine-characterstics-wrapper h1 {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 10px;
+}
+.penguine-characterstics-wrapper p {
+  font-size: 14px;
+  margin: 10px;
+  font-family: "Poppins";
+}
+.penguine-characterstics-wrapper .gif-wrapper {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.penguine-characterstics-wrapper .gif-wrapper img {
+  width: 100%;
+  width: 250px;
+  height: 250px;
+  margin: 10px auto;
+  background: radial-gradient(
+    circle closest-corner at center 145px,
+    rgb(84, 84, 84),
+    black 40%
+  );
+  border-radius: 20px;
+}
+/* how to buy */
+
+.how-to-buy {
+  background: #202932;
+  text-align: center;
+  padding: 50px 0;
+}
+.how-to-buy h1 {
+  text-transform: uppercase;
+}
+.how-to-buy .card {
+  width: fit-content;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  border: 1px solid #1668d4;
+  padding: 20px;
+}
+.how-to-buy .card .card-fusionadas {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  margin: 0px auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.connect-wallet {
+  background: url("images/howToBuyCard.svg");
+}
+.wallet-fusionadas {
+  background: url("images/Wallet-Fusionadas.svg");
+}
+.buy-matic {
+  background: url("images/buy-matic.svg");
+}
+.buy-nfts {
+  background: url("images/buy-nfts.svg");
+}
+.how-to-buy .grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+}
+.how-to-buy .card .card-text {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 300px;
+}
+.how-to-buy .card .card-text h3 {
+  color: #1668d4;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+.how-to-buy .card .card-text p {
+  font-size: 14px;
+  font-family: "Poppins";
+}
+.how-to-buy .btn {
+  padding: 10px;
+  background: #1668d4;
+  border: 1px solid #fff;
+  box-shadow: -10px 10px 1px #1668d4;
+}
+.how-to-buy .btn:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+/* buy your ppcs nfts */
+.buy-your-ppc {
+  background: #1668d4;
+  text-align: center;
+  padding: 10px;
+  min-height: 400px;
+}
+.buy-your-ppc h1 {
+  text-transform: uppercase;
+  text-align: left;
+}
+.buy-your-ppc-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 10px auto;
+}
+.buy-your-ppc .nft-wizard {
+  background: url("images/Buy-your-nfts.svg");
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 300px;
+  background-size: cover;
+}
+.buy-your-ppc .nft-wizard-text {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  margin: 20px auto;
+  font-family: "Poppins";
+  font-size: 15px;
+  padding: 5px;
+}
+.ppc-btn-wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+/* FAQs */
+
+.faq-wrapper {
+  width: 100%;
+  background: #202932;
+}
+.faq-wrapper > div {
+  width: 90%;
+  max-width: 600px;
+  padding: 5px;
+  margin: 0 auto;
+}
+.faq-wrapper h1 {
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* Footer */
+.footer {
+  background: #1668d4;
+  display: flex;
+  flex-direction: column;
+}
+.footer > div {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  margin: 5px auto;
+}
+.footer > div:nth-child(2) {
+  width: 100%;
+  margin: 5px auto;
+}
+.footer > div:nth-child(3) {
+  width: 100%;
+  justify-content: center;
+}
+.footer .footer-logo {
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
+}
+.footer .smart-contract {
+  margin: 0 auto;
+  font-family: "Poppins";
+  font-size: 14px;
+  text-align: center;
+}
+.footer .socials {
+  margin: 10px;
+  font-size: 30px;
+}
+@media (max-width: 519px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero .hero-heading {
+    padding: 10px;
+  }
+  .hero .hero-heading h1 {
+    font-size: 23px;
+    padding: 5px;
+    margin: 0 auto;
+  }
+  .hero .hero-penguins {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    margin-top: 10px;
+  }
+
+  .hero .btn-wrapper {
+    display: FLEX;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+  }
+  .hero .btn-wrapper .btn {
+    margin: 7px;
+  }
+  .pose-wrapper-second {
+    flex-direction: column;
+  }
+}
+@media (min-width: 520px) and (max-width: 640px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero .hero-heading {
+    padding: 10px;
+  }
+  .hero .hero-heading h1 {
+    font-size: 40px;
+  }
+  .hero .btn-wrapper .btn {
+    max-width: 100px;
+  }
+  .hero .hero-penguins {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+  }
+  .hero .hero-heading h1 {
+    margin: 0 auto;
+  }
+  .hero .btn-wrapper {
+    display: FLEX;
+    justify-content: CENTER;
+    align-items: CENTER;
+  }
+  .buy-your-ppc-wrapper {
+    flex-direction: row;
+  }
+  .buy-your-ppc .nft-wizard-text {
+    margin: 20px;
+  }
+  .pose-club-nfts {
+    padding: 30px;
+  }
+  .pose-wrapper-second {
+    flex-direction: column;
+  }
+}
+@media (min-width: 641px) and (max-width: 767px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero .hero-heading {
+    padding: 10px;
+  }
+  .hero .hero-heading h1 {
+    font-size: 46px;
+  }
+  .hero .btn-wrapper .btn {
+    max-width: 100px;
+  }
+  .hero .hero-penguins {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+  }
+  .hero .hero-heading h1 {
+    margin: 0 auto;
+  }
+  .hero .btn-wrapper {
+    display: FLEX;
+    justify-content: CENTER;
+    align-items: CENTER;
+  }
+  .penguine-pose-wrapper .text-wrapper h1 {
+    font-size: 30px;
+  }
+  .how-to-buy .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+  .buy-your-ppc-wrapper {
+    flex-direction: row;
+  }
+  .buy-your-ppc .nft-wizard-text {
+    margin: 20px;
+  }
+  .buy-your-ppc .nft-wizard {
+    height: 250px;
+    background-size: cover;
+  }
+  .pose-club-nfts {
+    padding: 40px;
+  }
+  .pose-wrapper-second {
+    flex-direction: column;
+  }
+  .penguine-characterstics-wrapper .gif-wrapper {
+    flex-direction: row;
+  }
+  .penguine-characterstics-wrapper .gif-wrapper img {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(
+      circle closest-corner at center 85px,
+      rgb(84, 84, 84),
+      black 40%
+    );
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero .hero-penguins {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+  }
+  .hero .hero-heading h1 {
+    margin: 0 auto;
+  }
+  .hero .btn-wrapper {
+    display: FLEX;
+    justify-content: CENTER;
+    align-items: CENTER;
+  }
+  .penguine-pose-wrapper .text-wrapper h1 {
+    font-size: 40px;
+  }
+  .how-to-buy .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .buy-your-ppc-wrapper {
+    flex-direction: row;
+  }
+  .buy-your-ppc .nft-wizard-text {
+    margin: 20px;
+  }
+  .buy-your-ppc .nft-wizard {
+    height: 250px;
+    background-size: cover;
+  }
+  .footer {
+    flex-direction: row;
+  }
+  .footer .footer-logo {
+    margin: 0 auto;
+  }
+  .footer > div:nth-child() {
+    width: 30%;
+  }
+  .footer > div:nth-child(2) {
+    width: 60%;
+  }
+  .footer > div:nth-child(3) {
+    width: 30%;
+  }
+  .pose-club-nfts {
+    padding: 50px;
+  }
+  .pose-wrapper-second {
+    flex-direction: column;
+  }
+  .penguine-characterstics-wrapper .gif-wrapper {
+    flex-direction: row;
+  }
+  .penguine-characterstics-wrapper .gif-wrapper img {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(
+      circle closest-corner at center 85px,
+      rgb(84, 84, 84),
+      black 40%
+    );
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .hero .hero-heading h1 {
+    font-size: 46px;
+  }
+  .btn-wrapper .btn {
+    max-width: 110px;
+    height: 60px;
+  }
+  .btn-wrapper {
+    text-align: left;
+  }
+  .penguine-pose-wrapper {
+    flex-direction: row;
+    padding: 50px 0;
+  }
+  .penguine-pose-wrapper .text-wrapper {
+    width: 50%;
+  }
+  .penguine-pose-wrapper .text-wrapper h1 {
+    font-size: 40px;
+    text-align: left;
+    margin: 10px 0;
+  }
+  .penguine-pose-wrapper .text-wrapper p {
+    text-align: left;
+  }
+  .penguine-pose-wrapper .penguine-pose-image-wrapper {
+    height: 250px;
+    max-width: 450px;
+  }
+  .how-to-buy .card {
+    width: 90%;
+    max-width: 750px;
+    margin: 10px auto;
+    flex-direction: row;
+  }
+  .how-to-buy .card .card-text {
+    text-align: left;
+  }
+  .buy-your-ppc-wrapper {
+    flex-direction: row;
+  }
+  .buy-your-ppc .nft-wizard-text {
+    margin: 20px;
+  }
+  .buy-your-ppc .nft-wizard {
+    height: 250px;
+    background-size: cover;
+  }
+  .footer {
+    flex-direction: row;
+  }
+  .footer .footer-logo {
+    margin: 0 auto;
+  }
+  .footer > div:nth-child() {
+    width: 30%;
+  }
+  .footer > div:nth-child(2) {
+    width: 60%;
+  }
+  .footer > div:nth-child(3) {
+    width: 30%;
+  }
+  .pose-club-nfts {
+    padding: 50px;
+  }
+  .penguine-characterstics-wrapper p {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .penguine-characterstics-wrapper .gif-wrapper {
+    flex-direction: row;
+  }
+  .penguine-characterstics-wrapper .gif-wrapper img {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(
+      circle closest-corner at center 85px,
+      rgb(84, 84, 84),
+      black 40%
+    );
+  }
+}
+@media (min-width: 1280px) {
+  .penguine-pose-wrapper {
+    flex-direction: row;
+    padding: 50px 0;
+  }
+  .penguine-pose-wrapper .text-wrapper {
+    width: 40%;
+  }
+  .penguine-pose-wrapper .text-wrapper h1 {
+    font-size: 40px;
+  }
+  .penguine-pose-wrapper .text-wrapper h1 {
+    font-size: 40px;
+    text-align: left;
+    margin: 10px 0;
+  }
+  .penguine-pose-wrapper .text-wrapper p {
+    text-align: left;
+  }
+  .penguine-pose-wrapper .penguine-pose-image-wrapper {
+    height: 250px;
+    max-width: 450px;
+  }
+  .btn-wrapper {
+    text-align: left;
+  }
+  .how-to-buy .card {
+    width: 90%;
+    max-width: 750px;
+    margin: 10px auto;
+    flex-direction: row;
+  }
+  .how-to-buy .card .card-text {
+    text-align: left;
+  }
+  .buy-your-ppc-wrapper {
+    flex-direction: row;
+  }
+  .buy-your-ppc .nft-wizard-text {
+    margin: 20px;
+  }
+  .buy-your-ppc .nft-wizard {
+    height: 250px;
+    background-size: cover;
+  }
+  .footer {
+    flex-direction: row;
+  }
+  .footer .footer-logo {
+    margin: 0 auto;
+  }
+  .footer > div:nth-child(1) {
+    width: 30%;
+    margin: 0 auto;
+  }
+  .footer > div:nth-child(2) {
+    width: 60%;
+  }
+  .footer > div:nth-child(3) {
+    width: 30%;
+  }
+  .pose-club-nfts {
+    padding: 50px;
+  }
+}
