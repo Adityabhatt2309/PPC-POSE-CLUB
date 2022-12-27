@@ -39,9 +39,15 @@ const modalWrapper = {
   width: "300px",
   height: "300px",
 };
+
 const Home = () => {
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [whichModal, setWhichModal] = useState("mint");
+
+  const handleWhichModal = (which) => {
+    setWhichModal(which);
+  };
 
   const { connector, account, activate, error, active, chainId, deactivate } =
     useWeb3React();
@@ -56,6 +62,7 @@ const Home = () => {
   }
 
   function closeModal() {
+    setWhichModal("mint");
     setIsOpen(false);
   }
 
@@ -120,21 +127,130 @@ const Home = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        {/* <button onClick={closeModal}>close</button> */}
-        <div style={modalWrapper}>
+        {!account && whichModal === "mint" && (
+          <div style={modalWrapper}>
+            <div
+              style={{
+                background: "#1668D4",
+                padding: "10px",
+                display: "flex",
+                justifyContent: "space-evenly",
+                textTransform: "uppercase",
+                letterSpacing: "2px",
+                fontSize: "14px",
+                alignItems: "center",
+              }}
+            >
+              <div>Buy your NFTs</div>
+              <button
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  fontSize: "30x",
+                  padding: "5px",
+                }}
+                onClick={closeModal}
+              >
+                <RxCross2 style={{ fontSize: "24px" }} />
+              </button>
+            </div>
+            <div style={{ padding: "50px 10px", textAlign: "center" }}>
+              <h3 style={{ textTransform: "uppercase" }}>total Minted 451</h3>
+              <div
+                style={{
+                  border: "2px solid #1668D4",
+                  margin: "10px auto",
+                  padding: "10px",
+                }}
+              >
+                <p style={{ fontSize: "12px", padding: "5px" }}>
+                  Connet your wallet and get started
+                </p>
+                <button
+                  className="btn-modal"
+                  onClick={() => handleWhichModal("wallet")}
+                >
+                  Connet Wallet
+                </button>
+              </div>
+            </div>
+          </div>
+        )} 
+
+        {!account && whichModal === "wallet" && (
+          <div style={modalWrapper}>
+            <div
+              style={{
+                background: "#1668D4",
+                padding: "10px",
+                display: "flex",
+                justifyContent: "space-between",
+                textTransform: "uppercase",
+                letterSpacing: "2px",
+                fontSize: "14px",
+                alignItems: "center",
+              }}
+            >
+              <div>Select your wallet</div>
+              <button
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  fontSize: "30x",
+                  padding: "5px",
+                }}
+                onClick={closeModal}
+              >
+                <RxCross2 style={{ fontSize: "24px" }} />
+              </button>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                alignItems: "center",
+                height: "200px",
+              }}
+            >
+              <img
+                src={metamask}
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  border: "1px solid #1668D4",
+                }}
+                onClick={onConnectWithMetamaskClick}
+              />
+              <img
+                src={connectWallet}
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  border: "1px solid #1668D4",
+                  backgroundSize: "contain",
+                }}
+                onClick={onConnectWithWalletConnect}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* if account */}
+      {account && 
+      <div style={modalWrapper}>
           <div
             style={{
               background: "#1668D4",
               padding: "10px",
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: "space-evenly",
               textTransform: "uppercase",
               letterSpacing: "2px",
               fontSize: "14px",
               alignItems: "center",
             }}
           >
-            <div>Select your wallet</div>
+            <div>Select Below</div>
             <button
               style={{
                 background: "transparent",
@@ -147,41 +263,27 @@ const Home = () => {
               <RxCross2 style={{ fontSize: "24px" }} />
             </button>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              alignItems: "center",
-              height: "200px",
-            }}
-          >
-            <img
-              src={metamask}
+          <div style={{ padding: "50px 10px", textAlign: "center" }}>
+            <div
               style={{
-                width: "100px",
-                height: "100px",
-                border: "1px solid #1668D4",
+                border: "2px solid #1668D4",
+                margin: "10px auto",
+                padding: "10px",
               }}
-              onClick={() => {
-                onConnectWithMetamaskClick()
-                closeModal()
-              }}
-            />
-            <img
-              src={connectWallet}
-              style={{
-                width: "100px",
-                height: "100px",
-                border: "1px solid #1668D4",
-                backgroundSize: "contain",
-              }}
-              onClick={() => {
-                onConnectWithWalletConnect()
-                closeModal()
-              }}
-            />
+            >
+              <p
+                style={{
+                  fontSize: "12px",
+                  padding: "5px",
+                }}
+              >
+                Connected Wallet
+              </p>
+              <p>{account.slice(0,6)}....{account.slice(-6)}</p>
+              <button className="btn-modal">Buy with matic</button>
+            </div>
           </div>
-        </div>
+        </div> }
       </Modal>
       <Nav />
       <Hero openModal={openModal} />
