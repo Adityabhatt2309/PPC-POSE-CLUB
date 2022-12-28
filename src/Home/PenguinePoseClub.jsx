@@ -54,10 +54,10 @@ const PenguinePoseClub = () => {
             greater impact helping each other reach their goals and build a life
             of purpose for themselves, their family and the people around them.
           </p>
-          <p>
+          <p style={{ margin: "10px auto" }}>
             The secondary market will bring in royalties that will be
             accumulated in the Donation Fund.
-            <p>
+            <p style={{ margin: "10px auto" }}>
               The royalties are 5%. 2.5% goes to the Donation Fund. Every
               quarter, penguins holders will propose and vote on proposals to
               determine where we send the donation fund. The other 2.5% go to

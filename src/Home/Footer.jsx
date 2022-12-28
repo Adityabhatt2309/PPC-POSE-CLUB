@@ -18,7 +18,7 @@ const Footer = () => {
               textAlign: "center",
             }}
           >
-            All right reserved. Penguine Posse Club, LLC TM 2022
+            All right reserved. Penguin Posse Club, LLC TM 2022
           </p>
         </div>
       </div>
