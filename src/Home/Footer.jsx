@@ -9,7 +9,7 @@ const Footer = () => {
       </div>
       <div>
         <div className="smart-contract">
-          <p>Verified smart contract: {process.env.REACT_APP_NFT_ADDRESS}</p>
+          <p>Verified smart contract: <a style={{ textDecoration: 'none' }} href="https://polygonscan.com/address/0xfD89fc676f2538f10523b9e43A8e76F74f03F44E" target="_blank"> {process.env.REACT_APP_NFT_ADDRESS} </a></p>
           <p
             style={{
               color: "lightgray",
