@@ -43,7 +43,7 @@ function App() {
         console.log("calll");
         await window.ethereum.request({
           method: "wallet_switchEthereumChain",
-          params: [{ chainId: "0x1" }],
+          params: [{ chainId: "0x89" }],
         });
         window.location.reload();
       } catch (error) {
@@ -54,14 +54,14 @@ function App() {
               params: [
                 {
                   rpcUrls: [process.env.REACT_APP_CURRENT_WALLETCONNECT_RPC],
-                  chainId: "0x1", 
+                  chainId: "0x89", 
                   nativeCurrency: {
-                    name: "Ethereum",
-                    symbol: "ETH",
+                    name: "Polygon",
+                    symbol: "MATIC",
                     decimals: 18,
                   },
-                  blockExplorerUrls: ["https://etherscan.com"],
-                  chainName: "Ethereum Mainnet",
+                  blockExplorerUrls: ["https://polygonscan.com/"],
+                  chainName: "Polygon Mainnet",
                 },
               ],
             });
@@ -80,13 +80,13 @@ function App() {
     }
   };
 
-  // useEffect(() => {
-  //   console.log("chainid changed", chainId);
-  //   if (chainId !== 1 && account) {
-  //     alert("Recovery Punks only support ethereum mainet");
-  //     onChangeNetworkClick();
-  //   }
-  // }, [chainId]);
+  useEffect(() => {
+    console.log("chainid changed", chainId);
+    if (chainId !== 137 && account) {
+      alert("Penguine Posse Club only support polygon mainet");
+      onChangeNetworkClick();
+    }
+  }, [chainId]);
 
   return (
     <div className="App">

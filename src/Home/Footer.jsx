@@ -9,7 +9,7 @@ const Footer = () => {
       </div>
       <div>
         <div className="smart-contract">
-          <p>Verified smart contract: xxxxxxxxxxxxxxxx</p>
+          <p>Verified smart contract: {process.env.REACT_APP_NFT_ADDRESS}</p>
           <p
             style={{
               color: "lightgray",
@@ -18,7 +18,7 @@ const Footer = () => {
               textAlign: "center",
             }}
           >
-            All right reserved. Penguine Pose Club, LLC TM 2022
+            All right reserved. Penguine Posse Club, LLC TM 2022
           </p>
         </div>
       </div>
