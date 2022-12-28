@@ -9,11 +9,15 @@ const BuyYourPPCNFTS = ({ totalMinted, openModal }) => {
         <div className="nft-wizard"></div>
         <div className="nft-wizard-text">
           <div>
-            <h1>Buy your ppc nfts</h1>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In dolorem
-            tempora maxime, accusamus commodi vitae dolor nostrum molestias
-            architecto deleniti veniam ullam beatae alias sint magni, voluptate
-            enim doloribus vel.
+            <h1>MINT Your Penguins:</h1>
+            <p style={{ margin: "10px auto", fontFamily: "poppins" }}>
+              Mint up to 100 penguins per wallet.{" "}
+            </p>
+            <p style={{ margin: "10px auto", fontFamily: "poppins" }}>
+              Please note this is not a money making scheme or employment
+              opportunity. We are building a community of like-minded penguins,
+              mint your penguins below to join.
+            </p>
           </div>
         </div>
       </div>

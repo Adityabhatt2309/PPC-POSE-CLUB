@@ -232,7 +232,7 @@ const Home = () => {
                 alignItems: "center",
               }}
             >
-              <div>Buy your NFTs</div>
+              <div>Mint your NFTs</div>
               <button
                 style={{
                   background: "transparent",
@@ -381,7 +381,7 @@ const Home = () => {
                     alt="matic"
                     style={{ width: "20px", margin: "0 5px" }}
                   />
-                  Buy with matic
+                  Mint with matic
                 </button>
               </div>
               <button className="btn-modal" onClick={logout}>
@@ -405,7 +405,7 @@ const Home = () => {
                 alignItems: "center",
               }}
             >
-              <div>Buy with Matic</div>
+              <div>Mint with Matic</div>
               <button
                 style={{
                   background: "transparent",
@@ -473,7 +473,7 @@ const Home = () => {
                     className="btn-modal"
                     onClick={mint}
                   >
-                    Buy Now
+                    Mint Now
                   </button>
                 </div>
               </div>

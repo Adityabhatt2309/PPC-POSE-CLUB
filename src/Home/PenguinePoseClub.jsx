@@ -7,13 +7,13 @@ const PenguinePoseClub = () => {
     <>
       <div className="penguine-pose-wrapper">
         <div className="text-wrapper">
-          <h1>Welcome to the Igloo, inside the penguine posse club</h1>
+          <h1>WELCOME TO THE PENGUIN POSSE CLUB</h1>
           <p>
             Penguin Posse Club NFTs (PPC) is a collection of unique digital
             collectibles raising the collective human potential for good on the
             Polygon (PoS) blockchain.
           </p>
-          <p>
+          <p style={{ marginTop: "10px" }}>
             Each Penguin Posse NFT doubles as your VIP pass to The Igloo: a club
             with members-only benefits, including participating in and voting on
             our Donation Fund on a quarterly basis, networking & relationship
@@ -47,25 +47,24 @@ const PenguinePoseClub = () => {
           />
         </div>
         <div className="text-wrapper">
-          <h1>Why the free mint ?</h1>
+          <h1 style={{ textTransform: "uppercase" }}>Why the free mint ?</h1>
           <p>
-            Because we launched this club to do good in the world and while
-            money can certainly help, far more impact can be made by individuals
-            uniting to help each other build the lives they want for themselves,
-            their families and their friends.
+            We launched the Penguin Posse Club to have a positive impact in the
+            world. While money can certainly help, we believe that we can have a
+            greater impact helping each other reach their goals and build a life
+            of purpose for themselves, their family and the people around them.
           </p>
           <p>
-            Sure over time, memberships will be bought and sold on secondary
-            markets and when that happens, we can do even more good through
-            royalties accumulated in our Donation Fund .
+            The secondary market will bring in royalties that will be
+            accumulated in the Donation Fund.
             <p>
-              5% royalties on the Collection 2.5% goes to a donation fund.
-              Quarterly, the community votes on where we donate through propsale
-              and governance structure. Each Penguin = l Vote 2.5% goes to
-              purchasing Guard for the Penguin Treasury. Guardian Token (GUARD)
-              is the treasury asset of choice and also gives the penguin project
-              voting power on the direction of the Guard FDN ecosystem which
-              will help amplify the positive impact we can have.
+              The royalties are 5%. 2.5% goes to the Donation Fund. Every
+              quarter, penguins holders will propose and vote on proposals to
+              determine where we send the donation fund. The other 2.5% go to
+              building a treasury in Guard which is our treasury asset of choice
+              and will give the Penguin Posse Club governance/voting rights to
+              participate in the Guard FDN ecosystem initiatives which will
+              amplify the collective, positive impact we have.
             </p>
           </p>
         </div>

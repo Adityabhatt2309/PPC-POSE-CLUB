@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../images/PPC_LOGO.svg";
-import { FaDiscord, FaTelegramPlane, FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaInstagram, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="footer">
@@ -23,9 +23,15 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <FaTelegramPlane className="socials" />
-        <FaDiscord className="socials" />
-        <FaTwitter className="socials" />
+        <a href="https://www.instagram.com/penguinposseclub/ " target="_blank">
+          <FaInstagram className="socials" />
+        </a>
+        <a href="https://discord.gg/w5f2R675eX" target="_blank">
+          <FaDiscord className="socials" />
+        </a>
+        <a href="https://twitter.com/thepenguinposse" target="_blank">
+          <FaTwitter className="socials" />
+        </a>
       </div>
     </div>
   );

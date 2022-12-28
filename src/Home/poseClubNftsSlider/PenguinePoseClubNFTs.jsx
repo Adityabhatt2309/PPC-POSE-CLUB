@@ -17,7 +17,7 @@ const PenguinePoseClubNFTs = ({ openModal }) => {
   const { account } = useWeb3React();
   return (
     <div className="pose-club-nfts">
-      <h1>Penguine pose club NFTS</h1>
+      <h1>Penguin posse club NFTS</h1>
       <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={125}

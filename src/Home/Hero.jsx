@@ -7,26 +7,20 @@ const Hero = ({ openModal, handleClickScroll }) => {
 
   useEffect(() => {
     if (account) {
-      setbtnText("BUY NOW");
+      setbtnText("Mint NOW");
     }
   });
 
   return (
     <div className="hero">
       <div className="hero-heading">
-        {/* <div>
-          <h1>Buy PPC NFTs</h1>
-          <h1>Earlier and get</h1>
-          <h1>Cheap as possible</h1>
-        </div> */}
         <div className="btn-wrapper">
           <button className="btn" onClick={openModal}>
             {btnText}
           </button>
           <button className="btn" onClick={handleClickScroll}>
-            How to buy
+            How to Mint
           </button>
-          <button className="btn">New to crypto</button>
         </div>
       </div>
       <div className="hero-penguins"></div>

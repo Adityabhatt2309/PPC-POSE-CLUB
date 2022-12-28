@@ -5,7 +5,7 @@ import gifthree from "../images/gif-three.gif";
 const PenguineCharacterstics = () => {
   return (
     <div className="penguine-characterstics-wrapper">
-      <h1>Penguine Characterstics</h1>
+      <h1>Penguin Characterstics</h1>
       <p>
         Each Penguin is unique and programmatically generated with the following
         possible traits, including attire, beaks, eye color, weapon, hair, feet,

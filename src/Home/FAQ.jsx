@@ -6,18 +6,18 @@ const FAQ = () => {
     <div className="faq-wrapper">
       <div>
         <h1 className="heading">FAQs</h1>
-        <div>
+        <div style={{ padding: "20px" }}>
           <Accordion
-            title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
-            content="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            title="Q: Where are the penguins stored?"
+            content="On IPFS. With IPFS, we get the benefits of decentralized, immutable and verifiable storage immediately. We can seamlessly push content into IPFS to create immutable links to the NFT's metadata and ensure the content is stored in perpetuity."
           />
           <Accordion
-            title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-            content="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of t"
+            title="Q: Are the penguins an ERC-721 token?"
+            content="Yes. Penguins are ERC-721 and comply with ERC-721 standards. This means that they sit on the Polygon network and can be viewed on any ERC-721 marketplace if you want to view your Penguin Posse Club NFTs."
           />
           <Accordion
-            title="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-            content="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. <br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+            title="Q: Do you charge any fees for transactions? "
+            content="No, we do not charge any fees for the transactions on Penguin Posse Club NFTs. There is a 5% royalty on every sell, with 2.5% of the total going directly to our Donation Fund. There may be transaction fees charged in MATIC (gas for the transaction)."
           />
         </div>
       </div>

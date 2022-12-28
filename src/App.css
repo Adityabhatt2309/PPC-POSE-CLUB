@@ -264,7 +264,8 @@
 .buy-your-ppc-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
+  max-width: 850px;
+  width: 100%;
   margin: 10px auto;
 }
 .buy-your-ppc .nft-wizard {
