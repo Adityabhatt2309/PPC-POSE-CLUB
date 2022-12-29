@@ -18,8 +18,14 @@ const Hero = ({ openModal, handleClickScroll }) => {
           <button className="btn" onClick={openModal}>
             {btnText}
           </button>
-          <button className="btn" onClick={handleClickScroll}>
-            How to Mint
+          <button className="btn">
+            <a
+              href="https://opensea.io/collection/penguin-posse-club"
+              style={{ textDecoration: "none" }}
+              target="_blank"
+            >
+              Buy Now
+            </a>
           </button>
         </div>
       </div>

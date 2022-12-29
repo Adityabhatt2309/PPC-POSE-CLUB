@@ -12,7 +12,7 @@ import Modal from "react-modal";
 import metamask from "../images/MetaMask.png";
 import connectWallet from "../images/WalletConnect.png";
 import { RxCross2 } from "react-icons/rx";
-import matic from "../images/matic.png";
+import opensea from "../images/opensea.svg";
 
 // web3 related imports
 import MetaMaskOnboarding from "@metamask/onboarding";
@@ -375,14 +375,14 @@ const Home = () => {
                 <p>
                   {account.slice(0, 6)}....{account.slice(-6)}
                 </p>
-                <button className="btn-modal" onClick={HandleBuywithMatic}>
-                  <img
-                    src={matic}
-                    alt="matic"
-                    style={{ width: "20px", margin: "0 5px" }}
-                  />
-                  Mint with matic
-                </button>
+                <a
+                  href="https://opensea.io/collection/penguin-posse-club"
+                  target="_blank"
+                  className="btn-modal"
+                  style={{ display: "block" }}
+                >
+                  Buy on Opensea
+                </a>
               </div>
               <button className="btn-modal" onClick={logout}>
                 DISCONNECT

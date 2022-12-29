@@ -19,7 +19,7 @@ const PenguinePoseClub = () => {
             our Donation Fund on a quarterly basis, networking & relationship
             building with other members to build cool projects together, and
             access to resources to learn how to become better humans that
-            produce noble deeds throughout the world.{" "}
+            produce noble deeds throughout the world.
           </p>
         </div>
         <div className="penguine-pose-image-wrapper">
