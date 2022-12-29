@@ -21,7 +21,7 @@ const BuyYourPPCNFTS = ({ totalMinted, openModal }) => {
           </div>
         </div>
       </div>
-      <h3>Totatl minted: {totalMinted}</h3>
+      <h3>Total minted: {totalMinted}</h3>
       <div className="btn-wrapper ppc-btn-wrapper">
         <button className="btn" onClick={openModal}>
           Mint now
