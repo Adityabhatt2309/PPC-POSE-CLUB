@@ -10,10 +10,18 @@ const Footer = () => {
       <div>
         <div className="smart-contract">
           <p>
-            Verified smart contract:{" "}
-            <span style={{ fontFamily: "poppins" }}>
-              {process.env.REACT_APP_NFT_ADDRESS}
-            </span>
+            Verified smart contract:
+            <a
+              style={{
+                textDecoration: "none",
+                fontFamily: "poppins",
+                display: "block",
+              }}
+              href="https://polygonscan.com/address/0xfD89fc676f2538f10523b9e43A8e76F74f03F44E"
+              target="_blank"
+            >
+              {process.env.REACT_APP_NFT_ADDRESS}{" "}
+            </a>
           </p>
           <p
             style={{
