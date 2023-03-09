@@ -1,5 +1,4 @@
 import useContract from "./useContract";
-
 import MINTERabi from "../contracts/Minter.json"
 
 const useMinterContract = () =>

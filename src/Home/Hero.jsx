@@ -18,6 +18,7 @@ const Hero = ({ openModal, handleClickScroll }) => {
           <button className="btn" onClick={openModal}>
             {btnText}
           </button>
+          
           <button className="btn">
             <a
               href="https://opensea.io/collection/penguin-posse-club"

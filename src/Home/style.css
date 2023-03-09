@@ -1,0 +1,76 @@
+.container{
+    /* style={{color:"black",backgroundColor:"#090c2b",paddingTop:"50px",paddingBottom:"50px"}} */
+    color: black;
+    background-color: #090c2b;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 20px;
+}
+.center_Img_div{
+    /* style={{display:"flex", justifyContent:"center",padding:"10px"}} */
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.center_img{
+    /* style={{height:"70px",width:"250px"}} */
+    height: 70px;
+    width: 250px;
+    padding-bottom: 50px;
+}
+.main_div{
+    /* style={{display:"flex",justifyContent:"space-evenly",alignItems:"center"}} */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.left_div{
+    /* style={{justifyContent:"center", alignItems:"center",display:"flex",flexDirection:"column",gap:"15px"}} */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.box_left{
+    /* style={{backgroundColor:"#35627b",padding:"20px",borderRadius:"12px",width:"500px"
+        ,height:"120px",display:"flex",justifyContent:"space-evenly",textAlign:"center" ,flexDirection:"column"}} */
+        background-color: #35627b;
+        padding: 20px;
+        border-radius: 12px;
+        width: 500px;
+        height: 120px;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        flex-direction: column;
+}
+
+
+
+/* responsive */
+@media only screen and (max-width: 884px) {
+    .main_div{
+        /* style={{display:"flex",justifyContent:"space-evenly",alignItems:"center"}} */
+        display: flex;
+        flex-direction: column;
+    }
+    .box_left{
+        /* style={{backgroundColor:"#35627b",padding:"20px",borderRadius:"12px",width:"500px"
+            ,height:"120px",display:"flex",justifyContent:"space-evenly",textAlign:"center" ,flexDirection:"column"}} */
+            background-color: #35627b;
+            padding: 20px;
+            border-radius: 12px;
+            width: 250px;
+            height: 120px;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            flex-direction: column;
+    }
+    .right_img{
+        width: 270px;
+        height: 300px;
+    }
+   
+  }

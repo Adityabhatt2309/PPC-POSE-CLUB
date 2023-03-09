@@ -22,6 +22,7 @@ import Web3 from "web3";
 
 import useMinterContract from "../hooks/useMinterContract";
 import useNftContract from "../hooks/useNFTContract";
+import PenguineMint from "./PenguineMint";
 
 const customStyles = {
   content: {
@@ -171,6 +172,7 @@ const Home = () => {
           // setTried(true);
         });
       localStorage.setItem("connectedWallet", "metamask");
+        setIsOpen(false);
     } else {
       onboarding.current.startOnboarding();
     }
@@ -482,16 +484,16 @@ const Home = () => {
         )}
       </Modal>
       <Nav />
-      <Hero openModal={openModal} handleClickScroll={handleClickScroll} />
-      <PenguinePoseClub />
-      <PenguinePoseClubNFTs openModal={openModal} />
-      <PenguineCharacterstics />
-      <HowToBuy openModal={openModal} />
-      <BuyYourPPCNFTS totalMinted={totalMinted} openModal={openModal} />
+      {/* <Hero openModal={openModal} handleClickScroll={handleClickScroll} /> */}
+      {/* <PenguinePoseClub /> */}
+      {/* <PenguinePoseClubNFTs openModal={openModal} /> */}
+      {/* <PenguineCharacterstics /> */}
+      {/* <HowToBuy openModal={openModal} /> */}
+      {/* <BuyYourPPCNFTS totalMinted={totalMinted} openModal={openModal} /> */}
+      <PenguineMint openModal={openModal} />
       <FAQ />
       <Footer />
     </div>
   );
 };
-
 export default Home;
